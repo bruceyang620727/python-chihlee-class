@@ -25,7 +25,12 @@ def playgame():
             min = keyin + 1
             print(f"你已經猜了{count}次了!")    
 
-    print("遊戲結束了!下次見")
+   
 
+while True:
+    playgame()
+    play_again = input("還要玩嗎? (y/n)")
+    if not (play_again == 'y'):
+        break
+print("遊戲結束")
 
-playgame()
