@@ -3,7 +3,7 @@
 import random
 #猜數字遊戲
 min = 1
-max = 10
+max = 100
 count = 0
 target = random.randint(min,max)
 print("=============猜數字遊戲==================\n\n")
@@ -21,5 +21,9 @@ while True:
     elif keyin < target:
         print("再大一點")
         min = keyin + 1
-    print(f"你已經猜了{count}次了!")    
-print('遊戲結束')
+        print(f"你已經猜了{count}次了!")    
+
+print("遊戲結束了!下次見")
+
+
+
