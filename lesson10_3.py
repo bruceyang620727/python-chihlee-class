@@ -12,11 +12,19 @@ def download_weather():
         return weather
     else:
         print('下載失敗!')
+        return False
         
 
 def main():
-    print("main function執行!")
+    print("main function開始執行!")
     #下載json檔
+    weather = download_weather() #download_weather內所使用的weather只能在該函式內使用，故不會與此處的weather衝突
+
+    if weather != False:
+        print('下載完畢!')
+    else:
+        print('應用程式下載失敗')
+        return
 
 if __name__ == '__main__':
     main()
