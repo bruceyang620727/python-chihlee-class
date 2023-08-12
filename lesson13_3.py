@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
 
-st.slider("三角函數",min_value=0, max_value=10)
-t = np.arange(0,1.0,0.05)
+value = st.slider("三角函數",min_value=0, max_value=10)
+t = np.arange(0,value,0.05)
 #print(t)
 #st.write(t)
 y1 = np.sin(2*np.pi*t)
