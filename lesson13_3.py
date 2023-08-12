@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import streamlit st
+import streamlit as st
 
 t = np.arange(0,1.0,0.05)
 #print(t)
