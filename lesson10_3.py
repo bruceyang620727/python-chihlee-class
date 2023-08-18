@@ -35,7 +35,7 @@ def save_csv(data):
     with open('目前天氣.csv',mode='w',encoding='utf-8',newline='') as file:  #csv檔案需要多加一個newline=''
         fieldnames = ['城市','起始時間','結束時間','最高溫度','最低溫度','感覺']
         writer = csv.DictWriter(file,fieldnames=fieldnames)
-        writer.writeheader()
+        writer.writeheader() #header就是'城市','起始時間','結束時間','最高溫度','最低溫度','感覺'
         writer.writerows(data)
 
 def main():
