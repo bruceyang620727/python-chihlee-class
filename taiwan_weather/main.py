@@ -78,6 +78,10 @@ if not check_file_exist():
 
 file_path = get_fileName_path()
 dataFrame = pd.read_csv(file_path)
+dataFrame['起始時間'] = pd.to_datetime(dataFrame['起始時間']) #把字串變成datetime時間物件
+dataFrame['結束時間'] = pd.to_datetime(dataFrame['結束時間']) #把字串變成datetime時間物件
+dataFrame['起始時間'] = dataFrame['起始時間'].dt.strftime('%Y-%m-%d日-%H點') #輸出又變成字串series
+dataFrame['結束時間'] = dataFrame['結束時間'].dt.strftime('%Y-%m-%d日-%H點') #輸出又變成字串series
 #顯示標題
 st.title("台灣各縣市氣候:")
 st.subheader("攝氏")
