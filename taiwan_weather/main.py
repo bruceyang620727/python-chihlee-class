@@ -82,11 +82,15 @@ dataFrame['起始時間'] = pd.to_datetime(dataFrame['起始時間']) #把字串
 dataFrame['結束時間'] = pd.to_datetime(dataFrame['結束時間']) #把字串變成datetime時間物件
 dataFrame['起始時間'] = dataFrame['起始時間'].dt.strftime('%Y-%m-%d日-%H點') #輸出又變成字串series
 dataFrame['結束時間'] = dataFrame['結束時間'].dt.strftime('%Y-%m-%d日-%H點') #輸出又變成字串series
+dataFrame['最高溫度'] = dataFrame['最高溫度'].astype(int) #將字串轉為int
+dataFrame['最低溫度'] = dataFrame['最低溫度'].astype(int) #將字串轉為int
+#更改外觀樣式
+dataFrame.style.highlight_max(subset='最高溫度',axis=0)
 #顯示標題
 st.title("台灣各縣市氣候:")
 st.subheader("攝氏")
 #顯非DataFrame
-st.dataframe(dataFrame,width=800,height=900)
+st.dataframe(dataFrame.style,width=800,height=900)
 
 st.line_chart(dataFrame,x='城市',y=['最高溫度','最低溫度'])
 
