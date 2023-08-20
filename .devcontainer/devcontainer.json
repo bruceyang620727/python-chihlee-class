@@ -10,7 +10,7 @@
 		"ghcr.io/wxw-matt/devcontainer-features/command_runner:0": {},
 		"ghcr.io/wxw-matt/devcontainer-features/script_runner:0": {}
 	},
-	"runArgs": ["--name", "__chihlee__"],
+	"runArgs": ["--name", "chihlee"],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
